@@ -2,7 +2,11 @@
 
     <!-- Base application theme. -->
     <style name="DemoTheme" parent="LibraryTheme">
-        <item name="second_activity_label_text_color">#00FF00</item>
+        <item name="second_activity_background_color">#FFFFFF</item>
+        <item name="second_activity_label_text_color">#17295B</item>
+        <item name="second_activity_label_text_size">30sp</item>
+        <item name="second_activity_label_font_family">cursive</item>
+        <item name="second_activity_label_text">Hello, from app!</item>
     </style>
 
 </resources>

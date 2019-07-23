@@ -1,7 +1,11 @@
 <resources>
 
     <style name="LibraryTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="second_activity_background_color">#000000</item>
         <item name="second_activity_label_text_color">#FF0000</item>
+        <item name="second_activity_label_text_size">15sp</item>
+        <item name="second_activity_label_font_family">sans-serif-light</item>
+        <item name="second_activity_label_text">Second Activity</item>
     </style>
 
 </resources>
