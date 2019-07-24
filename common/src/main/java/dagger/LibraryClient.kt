@@ -10,7 +10,8 @@ interface LibraryClient {
         fun foo(): Foo
     }
 
-    fun startActivity(context: Context)
+    fun startFirstActivity(context: Context)
+    fun startSecondActivity(context: Context)
 
     companion object {
         fun getInstance(dependencyResolver: DependencyResolver): LibraryClient {

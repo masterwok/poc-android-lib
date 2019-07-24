@@ -24,6 +24,6 @@ class DemoActivity : AppCompatActivity() {
     }
 
     private fun startLibraryActivity() = LibraryClient
-            .getInstance(ExampleDependencyResolver())
-            .startActivity(this)
+        .getInstance(ExampleDependencyResolver())
+        .startFirstActivity(this)
 }
