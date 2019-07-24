@@ -55,7 +55,7 @@ dependencies {
 
 def libraryGroupId = 'com.styledemo.common'
 def libraryArtifactId = 'common'
-def libraryVersion = '1.0.1'
+def libraryVersion = '1.0.3'
 
 publishing {
     publications {

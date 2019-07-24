@@ -1,20 +1,16 @@
-package dagger
+package com.styledemo.common.dagger
 
 import android.content.Context
-import contracts.Foo
-import dagger.injectors.ActivityInjector
+import com.styledemo.common.contracts.LibraryDependencyResolver
+import com.styledemo.common.dagger.injectors.ActivityInjector
 
 interface LibraryClient {
-
-    interface DependencyResolver {
-        fun foo(): Foo
-    }
 
     fun startFirstActivity(context: Context)
     fun startSecondActivity(context: Context)
 
     companion object {
-        fun getInstance(dependencyResolver: DependencyResolver): LibraryClient {
+        fun getInstance(dependencyResolver: LibraryDependencyResolver): LibraryClient {
 
             ActivityInjector.init(dependencyResolver)
 

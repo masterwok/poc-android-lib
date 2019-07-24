@@ -1,10 +1,10 @@
-package dagger.injectors
+package com.styledemo.common.dagger.injectors
 
 import com.styledemo.common.activities.MainActivity
 import com.styledemo.common.activities.SecondActivity
-import dagger.LibraryClient
-import dagger.components.DaggerLibraryComponent
-import dagger.components.LibraryComponent
+import com.styledemo.common.contracts.LibraryDependencyResolver
+import com.styledemo.common.dagger.components.DaggerLibraryComponent
+import com.styledemo.common.dagger.components.LibraryComponent
 
 internal class ActivityInjector {
     companion object {
@@ -14,10 +14,10 @@ internal class ActivityInjector {
         fun inject(activity: MainActivity) = libraryComponent?.inject(activity)
         fun inject(activity: SecondActivity) = libraryComponent?.inject(activity)
 
-        fun init(dependencyResolver: LibraryClient.DependencyResolver) {
+        fun init(dependencyResolver: LibraryDependencyResolver) {
             libraryComponent = DaggerLibraryComponent
                 .builder()
-                .dependencyResolver(dependencyResolver)
+                .libraryDependencyResolver(dependencyResolver)
                 .build()
         }
     }

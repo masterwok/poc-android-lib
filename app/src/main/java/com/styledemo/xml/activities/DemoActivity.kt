@@ -2,10 +2,9 @@ package com.styledemo.xml.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.styledemo.common.dagger.LibraryClient
 import com.styledemo.xml.R
 import com.styledemo.xml.config.ExampleDependencyResolver
-import contracts.Foo
-import dagger.LibraryClient
 import kotlinx.android.synthetic.main.activity_demo.*
 
 class DemoActivity : AppCompatActivity() {
@@ -23,7 +22,10 @@ class DemoActivity : AppCompatActivity() {
         }
     }
 
-    private fun startLibraryActivity() = LibraryClient
-        .getInstance(ExampleDependencyResolver())
-        .startFirstActivity(this)
+    private fun startLibraryActivity() {
+        LibraryClient
+            .getInstance(ExampleDependencyResolver())
+    //        .startSecondActivity(this);
+            .startFirstActivity(this)
+    }
 }

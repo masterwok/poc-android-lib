@@ -1,4 +1,4 @@
-package dagger.modules
+package com.styledemo.common.dagger.modules
 
 import dagger.Module
 

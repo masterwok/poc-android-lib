@@ -1,4 +1,4 @@
-package dagger
+package com.styledemo.common.dagger
 
 import android.content.Context
 import android.content.Intent
